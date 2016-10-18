@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .progress(style='margin:0px;')
+    .indeterminate
+
+  .container
+    h3.center-align.truncate Welcome! Enjoy the Big Buck Bunny
+
+    .card.hoverable
+      .card-image
+      .valing-wrapper.center-align
+        video.responsive-video.valign(controls)
+          source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4' type='video/mp4')
+      .card-content
+        p Big Buck Bunny (codename Peach) adalah film komedi animasi pendek dari Blender Institute, bagian dari Blender Foundation. seperti film sebelumnya dari yayasan yang sama, Elephants Dream, film ini dibuat menggunakan Blender, aplikasi software gratis untuk animasi yang dibuat oleh yayasan yang sama. Film ini dirilis sebagai Film sumber terbuka dibawah atribusi lisensi Creative Commons 3.0
+      .container
+        form.col.s12(action='/' method='post')
+          .row(style='margin-bottom:0px;')
+            .input-field.col.s12
+              textarea#newmemo.materialize-textarea(placeholder='Masukkan teks' name='teks')
+              //- label(for='newmemo') Buat memo baru
+          .row
+            button.btn.waves-effect.waves-light(type='submit' name='post' style='margin:5px;') POST
+
+    p.center-align= title
+    .row
+      .row.center-align.col.s12.center-align
+        form(action='/' method='get')
+          button.btn.waves-effect.waves-light(type='submit' name='get' style='margin:5px;') GET
+
+    script(src='/js/material.js')
