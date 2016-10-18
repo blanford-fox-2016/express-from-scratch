@@ -17,13 +17,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 src.route('/src')
   .get((req, res) => {
-    res.send("hallo world haadas")
+    res.render('src')
   })
 
 
 
 app.get('/', function (req, res) {
-  var data = {data: "your man"}
+  var data = {data: "Home"}
   res.render('tampilan', {data});
 });
 
@@ -32,7 +32,7 @@ app.post('/', function(req, res){
   // console.log(req.body);
   var text1 = req.body.text1 || "hallo"
   var text2 = req.body.text2
-  res.send(text1)
+  res.send("Ciluk Baaa " + text1 + " " + text2)
 })
 
 
