@@ -15,6 +15,11 @@ app.get('/', function (req, res){
 });
 
 app.post('/', function(req, res){
+  console.log(req.body);
+  // var data = {
+  //   firstname : req.body.firstname,
+  //   lastname : req.body.lastname
+  // }
   res.send('Got a POST request');
 });
 

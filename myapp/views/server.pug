@@ -1,2 +1,14 @@
 h1 Hello #{title}
   p selamat datang Indonesia
+form(method='post')
+  | First name:
+  br
+  input(type='text', name='firstname')
+  br
+  |   Last name:
+  br
+  input(type='text', name='lastname')
+  br
+  input(type='submit', value='Submit')
+
+#{data}
