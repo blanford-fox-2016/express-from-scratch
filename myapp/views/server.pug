@@ -1,0 +1,22 @@
+html
+  head
+    title= title
+  body
+    h1= message
+    form(name="add-comment", method="POST")
+        div.input
+            span.label Name
+            br
+            br
+            input(type="text", name="name")
+            br
+            br
+        div.input
+            span.label Comment
+            br
+            br
+            textarea(name="comment", cols="40", rows="5")
+            br
+            br
+        div.actions
+            input(type="submit", value="submit")
